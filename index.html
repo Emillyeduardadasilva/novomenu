@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu acessível com navegação responsiva">
+    <title>Menu Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home" aria-label="Página inicial">Menu Acessível</a>
+                </div>
+                
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">Início</a></li>
+                    <li role="none"><a href="#about" role="menuitem">Sobre</a></li>
+                    <li role="none"><a href="#services" role="menuitem">Serviços</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <h1>Bem-vindo ao Menu Acessível</h1>
+                <p>Um exemplo de menu de navegação totalmente acessível e responsivo.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre</h2>
+                <p>Este é um menu de navegação projetado com acessibilidade em mente, seguindo as melhores práticas WCAG.</p>
+                <ul>
+                    <li>Navegação por teclado completa</li>
+                    <li>Suporte a leitores de tela</li>
+                    <li>Design responsivo</li>
+                    <li>Contraste adequado de cores</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2>Serviços</h2>
+                <p>Características principais do nosso menu:</p>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Acessível</h3>
+                        <p>Compatível com tecnologias assistivas</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Responsivo</h3>
+                        <p>Funciona em todos os dispositivos</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Moderno</h3>
+                        <p>Design limpo e contemporâneo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco através do GitHub.</p>
+                <a href="https://github.com/Emillyeduardadasilva/novomenu" class="button" target="_blank" rel="noopener noreferrer">Visite nosso GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Menu Acessível. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
