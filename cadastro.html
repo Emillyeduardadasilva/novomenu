@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h1 class="title">Cadastro</h1>
+      <p class="subtitle">Já é cadastrado? <a href="login.html">Faça login</a></p>
+
+      <form id="formCadastro" class="form">
+        <label for="name">Nome</label>
+        <input id="name" class="input" type="text" placeholder="Digite seu nome" required/>
+
+        <label for="email">Email</label>
+        <input id="email" class="input" type="email" placeholder="hello@reallygreatsite.com" required/>
+
+        <label for="senha">Senha</label>
+        <input id="senha" class="input" type="password" placeholder="*****" required/>
+
+        <label for="data">Data de nascimento</label>
+        <input id="data" class="input" type="date" required/>
+
+        <button class="btn" type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
+

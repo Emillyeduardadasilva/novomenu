@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio em Áudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h1 class="title">Cardápio em Áudio</h1>
+      <p class="subtitle" id="mensagemAudio">
+        Bem-vindo ao cardápio em áudio. Após ouvir o cardápio, o cliente pode chamar o garçom para realizar o pedido.
+      </p>
+      <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
+      <div id="output" class="output"></div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    window.onload = function() {
+      // Fala a mensagem de boas-vindas
+      let msg = new SpeechSynthesisUtterance(
+        "Bem-vindo ao cardápio em áudio. Após ouvir o cardápio, o cliente pode chamar o garçom para realizar o pedido."
+      );
+      msg.lang = "pt-BR";
+      speechSynthesis.speak(msg);
+
+      // Lê o cardápio automaticamente ao selecionar o arquivo
+      document.getElementById("fileInput").addEventListener("change", function() {
+        gerarAudio();
+      });
+    };
+  </script>
+</body>
+</html>

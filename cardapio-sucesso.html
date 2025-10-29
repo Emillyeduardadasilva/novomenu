@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio Carregado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h1 class="title">Cardápio carregado com sucesso!</h1>
+      <p class="subtitle">Escolha como deseja visualizar:</p>
+      <button class="btn" onclick="gerarAudio()">🔊 Áudio</button>
+      <button class="btn" onclick="mostrarLibras()">🤟 Libras</button>
+      <button class="btn" onclick="mostrarFacilitado()">🅰️ Leitura Facilitada</button>
+      <div id="output" class="output"></div>
+    </section>
+  </main>
+  <div id="vlibras"></div>
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
